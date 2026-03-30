@@ -1,0 +1,31 @@
+Questa cartella contiene:
+
+1) dati_di_ricerca.txt
+2) microprime_suffix.exe
+4) SHA256.txt (contiene gli hash dei programmi EXE)
+5) Questo file
+
+Prima di mandare in esecuzione il programma microprime_suffix.exe è necessario creare una cartella in c:\dati_suffix perchè è in quel punto che il programma memorizzerà tutti i suoi dati. 
+
+Per una corretta interpretazione dei dati leggere guida_tecnica_suffissi.pdf nella cartella docs di questo repository
+
+Aprire il file dati_di_ricerca.txt e inserire le basi da cui si vuole partire a fare la ricerca e la sua relativa finestra.
+In questo esempio viene mostrato come inserire correttamente i dati:
+
+10^10, 10^11, 10000
+2^63, 2^64, 100000
+8868612876871686620, 9868612876871686620, 10000
+
+Il numero base, e cioè il prefisso, può essere impostato come sopra, in forma elevamento a potenza, o numero esteso. 
+La terza cifra è la finestra su cui il programma lavora. lo scopo del programma è quello di trovare tutti i numeri
+primi all'interno della finestra, all'altezza del prefisso, e poi di confrontare le due finestre partendo da due basi differenti.
+Non c'è un limite alla distanza dei prefissi ma bisogna tenere conto che la radice quadrata verrà calcolato sul prefisso più alto,
+pertanto se si dovesse impostare 10^18, 10^27, 100000, la radice verrà calcolata su 10^27 e il tempo della scrematura crescerà di conseguenza
+
+Il prefix b^e può essere esteso al massimo  __int128, pari a circa 1e38, ma anche in questo caso bisogna tenere conto dell'altezza delle finestre per calcolare in modo indicativo quanto tempo è necessario per portare a termine il lavoro. Per avere un'idea dei tempi consultare il readme del repository 
+
+Una nota da tenere presente è che ogni volta che si effettua un nuovo ciclo di ricerca, questo si sovrapporrà a quello vecchio ma non cancellerà in automatico tutti i file presenti nella cartella c:\dati_suffix. Il consiglio è di cancellare l'intero contenuto della cartella a ogni scansione nuova, salvando quelle ricerche risultate interessanti in un archivio personale con data e nome della ricerca
+
+Per lanciare di seguito analisi_suffix.py che si trova nella cartella Python, c'è bisogno di installare Python versione 3.12 o superiore e installare le librerie richieste. Purtroppo non ho potuto caricare il file exe di python in quanto troppo grande perchè comprensivo delle librerie richieste."pip install pandas matplotlib reportlab"
+
+Per qualsiasi problema mi potete contattare claugoru@yahoo.it
