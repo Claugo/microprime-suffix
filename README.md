@@ -229,7 +229,7 @@ Get-FileHash microprime_suffix.exe -Algorithm SHA256
 
 ## Progetto correlato
 
-[microprime v3](https://github.com/claudiogovi/microprime) — interfaccia grafica per la navigazione dei numeri primi tramite archivio precompilato (71 GB, fino a 25 cifre). I due progetti sono complementari: microprime v3 per la navigazione veloce su archivio preesistente, microprime_suffix per l'analisi on-demand senza limiti di scala e senza necessità di archivio.
+[microprime v3](https://github.com/Claugo/MicroPrime) — interfaccia grafica per la navigazione dei numeri primi tramite archivio precompilato (71 GB, fino a 25 cifre). I due progetti sono complementari: microprime v3 per la navigazione veloce su archivio preesistente, microprime_suffix per l'analisi on-demand senza limiti di scala e senza necessità di archivio.
 
 ---
 
