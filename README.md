@@ -3,7 +3,7 @@ Segmented sieve GC-60 for prime window analysis beyond 1e19,  first public bench
 
 
 **Autore:** Govi Claudio  
-**Data:** Aprile 2026  
+**Data:** Marzo 2026  
 **Linguaggi:** C++ (motore di calcolo) + Python (analisi e visualizzazione)  
 **Licenza:** MIT
 
