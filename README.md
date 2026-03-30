@@ -146,11 +146,9 @@ Sono supportate le espressioni `10^N`, `2^N`, e numeri interi di qualsiasi dimen
 **Passo 3** — Lanciare `microprime_suffix.exe`  
 I risultati vengono scritti in `C:\dati_suffix\suffix_data_N.csv` (un file per esperimento, numerato in ordine).
 
-**Passo 4** — Lanciare `analisi_suffix.exe`  
+**Passo 4** — Lanciare `analisi_suffix.py`  
 I grafici PNG vengono generati automaticamente per ogni CSV trovato in `C:\dati_suffix\`. Nessun argomento necessario.
 
-**Passo 5** — Lanciare `genera_guida.exe`  
-Rigenera il PDF della guida tecnica in `C:\dati_suffix\`.
 
 ---
 
@@ -184,17 +182,14 @@ microprime_suffix/
 ├── README.md
 ├── LICENSE
 ├── cpp/
-│   └── microprime_suffix.cpp      <- sorgente C++ (Code::Blocks + GCC/MinGW)
+│   └── main.cbp      <- sorgente microprime_suffix C++ (Code::Blocks + GCC/MinGW)
+│   └── microprime_suffix.cbp      <- file di configurazione code::block
 ├── python/
 │   ├── analisi_suffissi.py        <- generatore grafici PNG
-│   ├── genera_guida.py            <- generatore PDF guida tecnica
-│   └── calcola_hash.py            <- verifica hash SHA256
 ├── exe/
 │   ├── microprime_suffix.exe      <- motore compilato
-│   ├── analisi_suffix.exe         <- analisi compilata
-│   ├── genera_guida.exe           <- guida compilata
-│   ├── dati_di_ricerca.txt        <- file di input di esempio
-│   └── SHA256.txt                 <- hash di verifica degli exe
+│   ├── dati_di_ricerca.txt        <- file di input
+│   └── SHA256.txt                 <- hash di verifica del programma exe
 └── docs/
     └── guida_tecnica_suffissi.pdf <- guida tecnica con esempi numerici
 ```
